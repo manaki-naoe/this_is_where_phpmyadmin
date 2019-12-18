@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <section>
+            <div>
+                <h1>phpmyadminでホッとしたい～二度と本番環境を壊さない～</h1>
+                <div class="readme">
+                    <h2>使い方</h2>
+                    <p>ステージ環境リストにIPアドレスを追加する。</p>
+                    <p>ステージ環境リストに記載されているアドレス以外のページでサイドバーが赤色になります。</p>
+                </div>
+                <div class="list">
+                    <h2>ステージ環境リスト</h2>
+                    <div class="form">
+                        <select id="CopyFormat" size=5></select><br>
+                        <div class="group">
+                        <label for="text" id="l_text">アドレス</label>
+                        <input id="text" type="text" placeholder="アドレスを入力する">
+                        <div class="text_underline"></div>
+                        </div>
+                        <button id="Add">Add</button><br>
+                        <button id="Delete">Delete</button><br>
+                        <button id="Save">Save</button><br>
+                        <button id="Clear">Clear save data</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="./popup.js"></script>
+</body>
+</html>

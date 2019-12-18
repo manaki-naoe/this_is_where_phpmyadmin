@@ -1,0 +1,105 @@
+body {
+    width: 400px;
+    height: auto;
+    background: #242629;
+}
+
+h1,h2,h3 {
+    text-align: center;
+    color: #fffffe;
+}
+
+.readme p {
+    font-size: 10px;
+    color: #94a1b2;
+}
+
+.list {
+    width: 100%;
+}
+
+.form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#CopyFormat {
+    width: 100%;
+    margin: 10px 0;
+
+    background: none transparent;
+    vertical-align: middle;
+    font-size: inherit;
+    color: #fffffe;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+#CopyFormat::-webkit-scrollbar {
+    width: 10px;
+}
+#CopyFormat::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+}
+#CopyFormat::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 50, .5);
+  border-radius: 10px;
+  box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+}
+
+#l_text {
+    color: #fffffe;
+}
+#text{
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-bottom: 8px;
+    background: none transparent;
+    box-sizing: border-box;
+}
+.text_underline{
+    position: relative;
+    border-top: 1px solid #c2c2c2;
+}
+.text_underline::before,
+.text_underline::after{
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    height: 1px;
+    content: '';
+    background-color: #67c5ff;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.text_underline::before{
+    left: 50%;
+}
+.text_underline::after{
+    right: 50%;
+}
+#text:focus + .text_underline::before,
+#text:focus + .text_underline::after{
+    width: 50%;
+}
+
+.form button {
+    width: 100%;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    margin: 5px 0;
+    background: none transparent;
+}
+.form button:hover {
+    background: #67c5ff;
+    color: white;
+}

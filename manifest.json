@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "phpmyadminでホッとしたい",
+	"description": "～二度と本番環境を壊さない～",
+    "version": "1.0",
+    "icons":
+    {
+        "128": "icon_128.png"
+    },
+	"browser_action": {
+		"default_icon": "icon_16.png",
+		"default_title": "phpmyadminでホッとしたい",
+		"default_popup": "popup/popup.html"
+	},
+	"background": {
+        "scripts": ["jquery-3.3.1.js","background.js"],
+        "presistent": false
+    },
+	"content_scripts": [
+		{
+			"js" : ["jquery-3.3.1.js","script.js"],
+			"matches":  ["http://*/*", "https://*/*"]
+		}
+	]
+}
