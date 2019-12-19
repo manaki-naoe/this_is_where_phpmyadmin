@@ -60,6 +60,7 @@ h1,h2,h3 {
     padding-bottom: 8px;
     background: none transparent;
     box-sizing: border-box;
+    color: #fffffe;
 }
 .text_underline{
     position: relative;
