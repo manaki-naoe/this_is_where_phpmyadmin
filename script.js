@@ -2,18 +2,13 @@ if (document.getElementById("pmalogo") != null){
     chrome.runtime.sendMessage({
         message: "message"
     }, function(response) {
-        console.log(response);
         var pattern = response
 
-        var getPageTitle = document.title;
-        var setIp = getPageTitle.match(/((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))/);
-        if (!setIp){
-            setIp = 'localhost'
-        }
+        var getSelect = document.getElementById('select_server');
+        var getIdx = getSelect.selectedIndex;
+        var getServer = getSelect.options[getIdx].text;
 
-        console.log(setIp);
-
-        if (pattern.indexOf(setIp) >= 0){
+        if (pattern.indexOf(getServer) >= 0){
             document.title = 'ステージ';
         } else {
             document.title = '本番';
